@@ -3,8 +3,8 @@ describe("Calculator", function(){
     describe("add", function () {
     
         it("should be able to add two numbers", function() {
-            result = calculator.add(1,3.5);
-            expect(result).toBe(4.5);
+            result = calculator.add(1,3);
+            expect(result).toBe(4);
 
             result = calculator.add(5.5,1,2);
             expect(result).toBe(8.5);
@@ -26,8 +26,8 @@ describe("Calculator", function(){
             result = calculator.multiply(1,2);
             expect(result).toEqual(2);
 
-            result = calculator.multiply(4,2);
-            expect(result).toEqual(8);
+            result = calculator.multiply(4.5,2);
+            expect(result).toEqual(9);
         });
     
         it("should be able to multiply multiple numbers", function(){
@@ -35,8 +35,8 @@ describe("Calculator", function(){
             result = calculator.multiply(1,2,3,4);
             expect(result).toEqual(24);
 
-            result = calculator.multiply(6,2,1);
-            expect(result).toEqual(12);
+            result = calculator.multiply(6.2,2,1);
+            expect(result).toEqual(12.4);
 
         });
     });
