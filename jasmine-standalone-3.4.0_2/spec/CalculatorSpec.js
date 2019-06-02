@@ -40,4 +40,20 @@ describe("Calculator", function(){
 
         });
     });
+    
+    it("should remember last result", function(){
+        expect(calculator.add(1,2)).toEqual(3);
+        expect(calculator.last()).toEqual(3);
+    });
+
+    it("should use the last value as an argument", function(){
+       expect(calculator.add(1,2)).toEqual(3);
+       expect(calculator.multiply(calculator.last(),5)).toEqual(15); 
+    });
+
+    it("should allow calculator to remember more stuff", function(){
+        expect(calculator.add(1,2)).toEqual(3);
+        expect(calculator.set_slot(1)).toEqual(3);
+        expect(calculator.get_slot(1)).toEqual(3);
+    });
 });
